@@ -1,0 +1,24 @@
+﻿@model Bangazon_MVC_InitialSite.Models.Product
+
+@{
+    ViewBag.Title = "Add Product";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Price)
+        @Html.TextBoxFor(model => model.Price)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.TypeId)
+        @Html.TextBoxFor(model => model.TypeId)
+    </div>
+    <input type="submit" value="Create Product">
+}
+
