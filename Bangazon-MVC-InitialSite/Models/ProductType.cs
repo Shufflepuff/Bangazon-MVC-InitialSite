@@ -9,8 +9,8 @@ namespace Bangazon_MVC_InitialSite.Models
     public class ProductType
     {
         [Key]
-        public int TypeId { get; set; }
-
+        public int ProductTypeId { get; set; }
+      
         [Required]
         public string Type { get; set; }
 

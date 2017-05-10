@@ -29,5 +29,7 @@ namespace Bangazon_MVC_InitialSite.Models
         {
             return new ApplicationDbContext();
         }
+
+       
     }
 }
