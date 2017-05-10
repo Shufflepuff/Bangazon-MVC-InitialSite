@@ -16,5 +16,8 @@ namespace Bangazon_MVC_InitialSite.Models
         public int ProductId { get; set; }
         [Required]
         public int Quantity { get; set; }
+
+        public virtual IEnumerable<Product> products { get; set; }
+        public virtual Invoice Invoice { get; set; }
     }
 }

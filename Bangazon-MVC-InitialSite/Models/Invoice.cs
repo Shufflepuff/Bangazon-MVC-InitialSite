@@ -14,6 +14,8 @@ namespace Bangazon_MVC_InitialSite.Models
         public string Name { get; set; }
         [Required]
         public int Quantity { get; set; }
+        [Required]
+        public int paymentId { get; set; }
 
         public virtual IEnumerable<InvoiceLine> InvoiceLines { get; set; }
     }
