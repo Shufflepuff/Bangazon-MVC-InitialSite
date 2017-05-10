@@ -7,8 +7,9 @@ using System.Web;
 
 namespace Bangazon_MVC_InitialSite.DAL
 {
-    public class AppContext : ApplicationDbContext
+    public class AppContext : DbContext
     {
+        public AppContext() : base("BangazonPrime") { }
         public DbSet<Customer> Customers { get; set; }
 
         public DbSet<Invoice> Invoices { get; set; }
