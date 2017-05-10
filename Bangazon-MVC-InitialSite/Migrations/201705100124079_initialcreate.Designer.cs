@@ -7,13 +7,13 @@ namespace Bangazon_MVC_InitialSite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class intialmigration : IMigrationMetadata
+    public sealed partial class initialcreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(intialmigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialcreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705100018084_intialmigration"; }
+            get { return "201705100124079_initialcreate"; }
         }
         
         string IMigrationMetadata.Source
