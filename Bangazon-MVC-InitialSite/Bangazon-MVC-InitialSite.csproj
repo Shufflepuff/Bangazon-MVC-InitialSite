@@ -230,6 +230,7 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\StructuremapWebApi.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddProductController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IProductRepository.cs" />
@@ -249,6 +250,14 @@
     <Compile Include="Migrations\201705100124079_initialcreate.cs" />
     <Compile Include="Migrations\201705100124079_initialcreate.Designer.cs">
       <DependentUpon>201705100124079_initialcreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101456224_secondmigration.cs" />
+    <Compile Include="Migrations\201705101456224_secondmigration.Designer.cs">
+      <DependentUpon>201705101456224_secondmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101959267_model_update_foreignkeys.cs" />
+    <Compile Include="Migrations\201705101959267_model_update_foreignkeys.Designer.cs">
+      <DependentUpon>201705101959267_model_update_foreignkeys.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -321,6 +330,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\AddProduct\Index.cshtml" />
     <Content Include="Views\Detail\Detail.cshtml" />
     <Content Include="Views\Product\Products.cshtml" />
   </ItemGroup>
@@ -338,6 +348,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705100124079_initialcreate.resx">
       <DependentUpon>201705100124079_initialcreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101456224_secondmigration.resx">
+      <DependentUpon>201705101456224_secondmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101959267_model_update_foreignkeys.resx">
+      <DependentUpon>201705101959267_model_update_foreignkeys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

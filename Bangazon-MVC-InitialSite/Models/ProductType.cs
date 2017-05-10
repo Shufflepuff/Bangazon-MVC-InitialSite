@@ -10,6 +10,7 @@ namespace Bangazon_MVC_InitialSite.Models
     {
         [Key]
         public int ProductTypeId { get; set; }
+      
         [Required]
         public string Type { get; set; }
 
