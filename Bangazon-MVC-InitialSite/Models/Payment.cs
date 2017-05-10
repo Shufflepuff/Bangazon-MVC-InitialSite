@@ -16,5 +16,7 @@ namespace Bangazon_MVC_InitialSite.Models
         public int CustomerId { get; set; }
         [Required]
         public int AccountNumber { get; set; }
+
+        public virtual Customer Customer { get; set; }
     }
 }
