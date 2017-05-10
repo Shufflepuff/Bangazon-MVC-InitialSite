@@ -8,9 +8,16 @@ namespace Bangazon_MVC_InitialSite.DAL
 {
     public class ProductRepository : IProductRepository
     {
+        readonly AppContext _context;
+
+        public ProductRepository(AppContext context)
+        {
+            _context = context;
+        }
+
         public IEnumerable<Product> GetProducts()
         {
-            throw new NotImplementedException();
+            return _context.Products;
         }
     }
 }

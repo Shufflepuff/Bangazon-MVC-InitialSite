@@ -1,0 +1,25 @@
+﻿@using Bangazon_MVC_InitialSite.Models
+@model Bangazon_MVC_InitialSite.Models.Product
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    
+    @foreach (var item in ViewBag.Products)
+    {
+        <ul>
+            <li>@item.Name</li>
+        </ul>
+    }
+
+</div>
+<p>
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>
