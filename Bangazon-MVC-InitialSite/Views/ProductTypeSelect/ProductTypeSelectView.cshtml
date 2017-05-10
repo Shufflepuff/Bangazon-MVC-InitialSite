@@ -1,6 +1,4 @@
-﻿@{
-    Layout = null;
-}
+﻿@model Bangazon_MVC_InitialSite.Models.ProductType
 
 <!DOCTYPE html>
 
@@ -11,7 +9,12 @@
 </head>
 <body>
     <div>
-        ProductTypeSelectView
+@{
+    foreach (var type in ViewBag.Types)
+    {
+        <div>@type.Type</div>
+    }
+}
     </div>
 </body>
 </html>
