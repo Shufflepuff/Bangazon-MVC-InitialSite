@@ -258,6 +258,10 @@
     <Compile Include="Migrations\201705101959267_model_update_foreignkeys.Designer.cs">
       <DependentUpon>201705101959267_model_update_foreignkeys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111434471_redefineproduct.cs" />
+    <Compile Include="Migrations\201705111434471_redefineproduct.Designer.cs">
+      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -352,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705101959267_model_update_foreignkeys.resx">
       <DependentUpon>201705101959267_model_update_foreignkeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111434471_redefineproduct.resx">
+      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
