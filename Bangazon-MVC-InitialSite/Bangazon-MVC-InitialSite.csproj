@@ -235,6 +235,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IProductRepository.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\AddProductRepo.cs" />
     <Compile Include="DAL\IAddProductRepo.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DAL\AppContext.cs" />
