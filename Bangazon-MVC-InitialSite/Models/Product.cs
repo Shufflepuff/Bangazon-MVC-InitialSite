@@ -10,21 +10,14 @@ namespace Bangazon_MVC_InitialSite.Models
     {
         [Key]
         public int ProductId { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public decimal Price { get; set; }
-        [Required]
-        public int TypeId { get; set; }
 
-        public virtual IEnumerable<Product> InvoiceLines { get; set; }
+        public string Name { get; set; }
+
+        public decimal Price { get; set; }
 
         public int ProductTypeId { get; set; }
-        [Required]
+
         public int CustomerId { get; set; }
 
-
-        public virtual ProductType ProductType { get; set; }
-        public virtual Customer Customer { get; set; }
     }
 }
