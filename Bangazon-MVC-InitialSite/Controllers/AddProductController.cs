@@ -20,7 +20,8 @@ namespace Bangazon_MVC_InitialSite.Controllers
         // GET: AddProduct
         public ActionResult Index()
         {
-            return View();
+            var product = new Product();
+            return View(product);
         }
 
         // POST: AddProduct
