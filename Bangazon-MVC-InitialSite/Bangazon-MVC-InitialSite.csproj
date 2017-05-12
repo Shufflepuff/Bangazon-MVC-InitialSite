@@ -265,6 +265,10 @@
     <Compile Include="Migrations\201705111434471_redefineproduct.Designer.cs">
       <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705121948101_CustomerAsIdentityUser.cs" />
+    <Compile Include="Migrations\201705121948101_CustomerAsIdentityUser.Designer.cs">
+      <DependentUpon>201705121948101_CustomerAsIdentityUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -363,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705111434471_redefineproduct.resx">
       <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705121948101_CustomerAsIdentityUser.resx">
+      <DependentUpon>201705121948101_CustomerAsIdentityUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

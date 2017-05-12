@@ -13,7 +13,7 @@ namespace Bangazon_MVC_InitialSite.Models
         [Required]
         public string Type { get; set; }
         [Required]
-        public int CustomerId { get; set; }
+        public string Username { get; set; }
         [Required]
         public int AccountNumber { get; set; }
 

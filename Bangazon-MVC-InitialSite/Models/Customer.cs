@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,11 +7,8 @@ using System.Web;
 
 namespace Bangazon_MVC_InitialSite.Models
 {
-    public class Customer
+    public class Customer : IdentityUser
     {
-        [Key]
-        public int CustomerId { get; set; }
-
         [Required]
         public string Name { get; set; }
 

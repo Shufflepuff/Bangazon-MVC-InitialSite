@@ -11,9 +11,7 @@ namespace Bangazon_MVC_InitialSite.Models
         [Key]
         public int InvoiceId { get; set; }
         [Required]
-        public int CustomerId { get; set; }
-        [Required]
-        public string Name { get; set; }
+        public string Username { get; set; }
         [Required]
         public int Quantity { get; set; }
         [Required]

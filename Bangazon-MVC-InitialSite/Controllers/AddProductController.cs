@@ -18,6 +18,7 @@ namespace Bangazon_MVC_InitialSite.Controllers
         }
 
         // GET: AddProduct
+        [Authorize]
         public ActionResult Index()
         {
             var product = new Product();
@@ -27,11 +28,12 @@ namespace Bangazon_MVC_InitialSite.Controllers
         // POST: AddProduct
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Index(Product product)
         {
             try
             {
-                product.CustomerId = 1;
+                product.Username = "taylor";
                 _addProductRepo.AddProduct(product);
                 return RedirectToAction("Index");
             }

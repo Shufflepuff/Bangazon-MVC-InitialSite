@@ -17,7 +17,7 @@ namespace Bangazon_MVC_InitialSite.Models
 
         public int ProductTypeId { get; set; }
 
-        public int CustomerId { get; set; }
+        public string Username { get; set; }
 
     }
 }

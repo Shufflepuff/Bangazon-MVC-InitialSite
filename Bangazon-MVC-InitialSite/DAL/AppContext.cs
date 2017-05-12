@@ -1,4 +1,5 @@
 ﻿using Bangazon_MVC_InitialSite.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,10 +8,9 @@ using System.Web;
 
 namespace Bangazon_MVC_InitialSite.DAL
 {
-    public class AppContext : DbContext
+    public class AppContext : IdentityDbContext<Customer>
     {
         public AppContext() : base("BangazonPrime") { }
-        public DbSet<Customer> Customers { get; set; }
 
         public DbSet<Invoice> Invoices { get; set; }
 
