@@ -233,11 +233,16 @@
     <Compile Include="Controllers\AddProductController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IProductRepository.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductTypeSelectController.cs" />
-    <Compile Include="DAL\AppContext.cs" />
     <Compile Include="DAL\IProductTypeRepo.cs" />
     <Compile Include="DAL\ProductTypeRepo.cs" />
+    <Compile Include="DAL\AddProductRepo.cs" />
+    <Compile Include="DAL\IAddProductRepo.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="DAL\AppContext.cs" />
+    <Compile Include="DAL\ProductRepository.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
@@ -250,6 +255,18 @@
     <Compile Include="Migrations\201705100124079_initialcreate.cs" />
     <Compile Include="Migrations\201705100124079_initialcreate.Designer.cs">
       <DependentUpon>201705100124079_initialcreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101456224_secondmigration.cs" />
+    <Compile Include="Migrations\201705101456224_secondmigration.Designer.cs">
+      <DependentUpon>201705101456224_secondmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705101959267_model_update_foreignkeys.cs" />
+    <Compile Include="Migrations\201705101959267_model_update_foreignkeys.Designer.cs">
+      <DependentUpon>201705101959267_model_update_foreignkeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111434471_redefineproduct.cs" />
+    <Compile Include="Migrations\201705111434471_redefineproduct.Designer.cs">
+      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -325,6 +342,7 @@
     <Content Include="Views\AddProduct\Index.cshtml" />
     <Content Include="Views\Detail\Detail.cshtml" />
     <Content Include="Views\ProductTypeSelect\ProductTypeSelectView.cshtml" />
+    <Content Include="Views\Product\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -340,6 +358,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705100124079_initialcreate.resx">
       <DependentUpon>201705100124079_initialcreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101456224_secondmigration.resx">
+      <DependentUpon>201705101456224_secondmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705101959267_model_update_foreignkeys.resx">
+      <DependentUpon>201705101959267_model_update_foreignkeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111434471_redefineproduct.resx">
+      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

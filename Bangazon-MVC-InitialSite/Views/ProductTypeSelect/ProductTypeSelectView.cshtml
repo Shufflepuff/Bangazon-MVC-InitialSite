@@ -1,20 +1,8 @@
-﻿@model Bangazon_MVC_InitialSite.Models.ProductType
+﻿@using Bangazon_MVC_InitialSite.Models
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
 @{
-    foreach (var type in ViewBag.Types)
+    foreach (ProductType type in ViewBag.Types)
     {
-        <div>@type.Type</div>
+        @Html.ActionLink(type.Type, "Index", "Product")
     }
 }
-    </div>
-</body>
-</html>
