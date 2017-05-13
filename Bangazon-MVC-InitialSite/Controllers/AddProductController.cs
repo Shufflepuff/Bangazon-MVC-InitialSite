@@ -25,20 +25,20 @@ namespace Bangazon_MVC_InitialSite.Controllers
         }
 
         // POST: AddProduct
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Index(Product product)
-        {
-            try
-            {
-                product.CustomerId = 1;
-                _addProductRepo.AddProduct(product);
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return Redirect("Shared/Error");
-            }
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Index(Product product)
+        //{
+        //    try
+        //    {
+        //        product.CustomerId = 1;
+        //        _addProductRepo.AddProduct(product);
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return Redirect("Shared/Error");
+        //    }
+        //}
     }
 }
