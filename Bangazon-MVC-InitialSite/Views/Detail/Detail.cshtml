@@ -1,17 +1,21 @@
-﻿@{
-    Layout = null;
+﻿@model Bangazon_MVC_InitialSite.Models.Product
+
+@{
+    ViewBag.Title = "Product Detail";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
     <div>
-    
+        <p>Product Name</p>
+        @ViewBag.Product.Name
     </div>
-</body>
-</html>
+    <div>
+        <p>Price</p>
+        @ViewBag.Product.Price
+    </div>
+    <div>
+        <p>Description</p>
+        @ViewBag.Product.Description
+    </div>
+    <button>Add to Order</button>
+

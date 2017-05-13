@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Bangazon_MVC_InitialSite.Models;
+using System.Data;
 
 namespace Bangazon_MVC_InitialSite.DAL
 {
@@ -18,6 +19,11 @@ namespace Bangazon_MVC_InitialSite.DAL
         public IEnumerable<Product> GetProducts()
         {
             return _context.Products;
+        }
+
+        public Product GetProductById(int productId)
+        {
+            return _context.Products.Where(x => x.ProductId == productId).FirstOrDefault();
         }
     }
 }

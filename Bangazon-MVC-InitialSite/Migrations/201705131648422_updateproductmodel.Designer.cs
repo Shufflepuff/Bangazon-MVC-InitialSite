@@ -7,13 +7,13 @@ namespace Bangazon_MVC_InitialSite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class model_update_foreignkeys : IMigrationMetadata
+    public sealed partial class updateproductmodel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(model_update_foreignkeys));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateproductmodel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705101959267_model_update_foreignkeys"; }
+            get { return "201705131648422_updateproductmodel"; }
         }
         
         string IMigrationMetadata.Source
