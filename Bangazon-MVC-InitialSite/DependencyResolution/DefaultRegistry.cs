@@ -18,7 +18,10 @@
 namespace Bangazon_MVC_InitialSite.DependencyResolution {
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
-	
+    using System.Configuration;
+    using System.Data;
+    using System.Data.SqlClient;
+
     public class DefaultRegistry : Registry {
         #region Constructors and Destructors
 
@@ -28,7 +31,7 @@ namespace Bangazon_MVC_InitialSite.DependencyResolution {
                     scan.TheCallingAssembly();
                     scan.WithDefaultConventions();
                 });
-            //For<IExample>().Use<Example>();
+            For<IDbConnection>().Use(c => new SqlConnection(ConfigurationManager.ConnectionStrings["BangazonPrime"].ConnectionString));
         }
 
         #endregion
