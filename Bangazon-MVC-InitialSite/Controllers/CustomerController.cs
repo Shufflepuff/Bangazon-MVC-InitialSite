@@ -31,29 +31,13 @@ namespace Bangazon_MVC_InitialSite.Controllers
 
             var model = new CustomerDropDown();
             model.CustomerDropDownData = dropdownData;
-            model.SelectedId = 3;
+
+            HttpCookie UserCookies = new HttpCookie("UserCookies");
+            UserCookies.Value = "3";
+            UserCookies.Expires = DateTime.Now.AddHours(3);
+            Response.Cookies.Add(UserCookies);
 
             return PartialView("~/Views/Customer/CustomerDropDownPartial.cshtml",model);
-        }
-
-        // GET: Customer
-        public PartialViewResult CustomerDropDownPartial(int id)
-        {
-            IEnumerable<Customer> customers = _customerRepo.GetCustomers();
-
-            var dropdownData = customers
-                .Select(c => new SelectListItem()
-                {
-                    Text = c.Name, //Need to apply the correct text field here
-                    Value = c.CustomerId.ToString() //Need to apply the correct value field here
-                })
-                .ToList();
-
-            var model = new CustomerDropDown();
-            model.CustomerDropDownData = dropdownData;
-            model.SelectedId = 3;
-
-            return PartialView("~/Views/Customer/CustomerDropDownPartial.cshtml", model);
         }
     } 
 }
