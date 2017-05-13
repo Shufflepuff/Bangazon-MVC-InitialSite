@@ -235,6 +235,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IProductRepository.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\AddProductRepo.cs" />
+    <Compile Include="DAL\IAddProductRepo.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DAL\AppContext.cs" />
     <Compile Include="DAL\ProductRepository.cs" />
@@ -258,6 +260,10 @@
     <Compile Include="Migrations\201705131648422_updateproductmodel.cs" />
     <Compile Include="Migrations\201705131648422_updateproductmodel.Designer.cs">
       <DependentUpon>201705131648422_updateproductmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111434471_redefineproduct.cs" />
+    <Compile Include="Migrations\201705111434471_redefineproduct.Designer.cs">
+      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705131648422_updateproductmodel.resx">
       <DependentUpon>201705131648422_updateproductmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111434471_redefineproduct.resx">
+      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
