@@ -10,5 +10,7 @@ namespace Bangazon_MVC_InitialSite.DAL
     public interface IProductRepository
     {
         IEnumerable<Product> GetProducts();
+
+        Product GetProductById(int productId);
     }
 }
