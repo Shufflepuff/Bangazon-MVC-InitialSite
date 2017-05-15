@@ -27,7 +27,8 @@
                     <li>@Html.ActionLink("Add Product", "Index", "AddProduct")</li>
                     <li>@Html.ActionLink("Products", "Index", "Product")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                @Html.Action("CustomerDropDownPartial","Customer")
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
