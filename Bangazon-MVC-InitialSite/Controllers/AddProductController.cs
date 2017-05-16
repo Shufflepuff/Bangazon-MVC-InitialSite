@@ -31,7 +31,6 @@ namespace Bangazon_MVC_InitialSite.Controllers
         {
             try
             {
-                product.CustomerId = 1;
                 _addProductRepo.AddProduct(product);
                 return RedirectToAction("Index");
             }
