@@ -10,35 +10,35 @@ namespace Bangazon_MVC_InitialSite.Controllers
 {
     public class AddProductController : Controller
     {
-        readonly IAddProductRepo _addProductRepo;
+    //    readonly IAddProductRepo _addProductRepo;
 
-        public AddProductController(IAddProductRepo addProductRepo)
-        {
-            _addProductRepo = addProductRepo;
-        }
+    //    public AddProductController(IAddProductRepo addProductRepo)
+    //    {
+    //        _addProductRepo = addProductRepo;
+    //    }
 
-        // GET: AddProduct
-        public ActionResult Index()
-        {
-            var product = new Product();
-            return View(product);
-        }
+    //    // GET: AddProduct
+    //    public ActionResult Index()
+    //    {
+    //        var product = new Product();
+    //        return View(product);
+    //    }
 
-        // POST: AddProduct
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Index(Product product)
-        {
-            try
-            {
-                product.CustomerId = 1;
-                _addProductRepo.AddProduct(product);
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return Redirect("Shared/Error");
-            }
-        }
+    //    // POST: AddProduct
+    //    [HttpPost]
+    //    [ValidateAntiForgeryToken]
+    //    //public ActionResult Index(Product product)
+    //    //{
+    //    //    try
+    //    //    {
+    //    //        product.CustomerId = 1;
+    //    //        _addProductRepo.AddProduct(product);
+    //    //        return RedirectToAction("Index");
+    //    //    }
+    //    //    catch
+    //    //    {
+    //    //        return Redirect("Shared/Error");
+    //    //    }
+    //    //}
     }
 }
