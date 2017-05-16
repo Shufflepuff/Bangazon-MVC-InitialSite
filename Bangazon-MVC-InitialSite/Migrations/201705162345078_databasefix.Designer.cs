@@ -7,13 +7,13 @@ namespace Bangazon_MVC_InitialSite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class redefineproduct : IMigrationMetadata
+    public sealed partial class databasefix : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(redefineproduct));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(databasefix));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705111434471_redefineproduct"; }
+            get { return "201705162345078_databasefix"; }
         }
         
         string IMigrationMetadata.Source

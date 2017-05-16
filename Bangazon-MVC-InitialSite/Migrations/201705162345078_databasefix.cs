@@ -3,7 +3,7 @@ namespace Bangazon_MVC_InitialSite.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialcreate : DbMigration
+    public partial class databasefix : DbMigration
     {
         public override void Up()
         {
@@ -30,17 +30,23 @@ namespace Bangazon_MVC_InitialSite.Migrations
                         ProductId = c.Int(nullable: false),
                         Quantity = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.InvoiceLineId);
+                .PrimaryKey(t => t.InvoiceLineId)
+                .ForeignKey("dbo.Invoices", t => t.InvoiceId, cascadeDelete: true)
+                .Index(t => t.InvoiceId);
             
             CreateTable(
                 "dbo.Invoices",
                 c => new
                     {
                         InvoiceId = c.Int(nullable: false, identity: true),
+                        CustomerId = c.Int(nullable: false),
                         Name = c.String(nullable: false),
                         Quantity = c.Int(nullable: false),
+                        paymentId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.InvoiceId);
+                .PrimaryKey(t => t.InvoiceId)
+                .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: true)
+                .Index(t => t.CustomerId);
             
             CreateTable(
                 "dbo.Payments",
@@ -51,7 +57,9 @@ namespace Bangazon_MVC_InitialSite.Migrations
                         CustomerId = c.Int(nullable: false),
                         AccountNumber = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.PaymentId);
+                .PrimaryKey(t => t.PaymentId)
+                .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: true)
+                .Index(t => t.CustomerId);
             
             CreateTable(
                 "dbo.Products",
@@ -60,9 +68,15 @@ namespace Bangazon_MVC_InitialSite.Migrations
                         ProductId = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        TypeId = c.Int(nullable: false),
+                        Description = c.String(nullable: false),
+                        Customer_CustomerId = c.Int(),
+                        ProductType_ProductTypeId = c.Int(),
                     })
-                .PrimaryKey(t => t.ProductId);
+                .PrimaryKey(t => t.ProductId)
+                .ForeignKey("dbo.Customers", t => t.Customer_CustomerId)
+                .ForeignKey("dbo.ProductTypes", t => t.ProductType_ProductTypeId)
+                .Index(t => t.Customer_CustomerId)
+                .Index(t => t.ProductType_ProductTypeId);
             
             CreateTable(
                 "dbo.ProductTypes",
@@ -77,6 +91,16 @@ namespace Bangazon_MVC_InitialSite.Migrations
         
         public override void Down()
         {
+            DropForeignKey("dbo.Products", "ProductType_ProductTypeId", "dbo.ProductTypes");
+            DropForeignKey("dbo.Products", "Customer_CustomerId", "dbo.Customers");
+            DropForeignKey("dbo.Payments", "CustomerId", "dbo.Customers");
+            DropForeignKey("dbo.InvoiceLines", "InvoiceId", "dbo.Invoices");
+            DropForeignKey("dbo.Invoices", "CustomerId", "dbo.Customers");
+            DropIndex("dbo.Products", new[] { "ProductType_ProductTypeId" });
+            DropIndex("dbo.Products", new[] { "Customer_CustomerId" });
+            DropIndex("dbo.Payments", new[] { "CustomerId" });
+            DropIndex("dbo.Invoices", new[] { "CustomerId" });
+            DropIndex("dbo.InvoiceLines", new[] { "InvoiceId" });
             DropTable("dbo.ProductTypes");
             DropTable("dbo.Products");
             DropTable("dbo.Payments");

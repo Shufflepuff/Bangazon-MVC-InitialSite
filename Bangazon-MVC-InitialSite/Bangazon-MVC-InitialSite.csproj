@@ -252,21 +252,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705100124079_initialcreate.cs" />
-    <Compile Include="Migrations\201705100124079_initialcreate.Designer.cs">
-      <DependentUpon>201705100124079_initialcreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705101456224_secondmigration.cs" />
-    <Compile Include="Migrations\201705101456224_secondmigration.Designer.cs">
-      <DependentUpon>201705101456224_secondmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705131648422_updateproductmodel.cs" />
-    <Compile Include="Migrations\201705131648422_updateproductmodel.Designer.cs">
-      <DependentUpon>201705131648422_updateproductmodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705111434471_redefineproduct.cs" />
-    <Compile Include="Migrations\201705111434471_redefineproduct.Designer.cs">
-      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
+    <Compile Include="Migrations\201705162345078_databasefix.cs" />
+    <Compile Include="Migrations\201705162345078_databasefix.Designer.cs">
+      <DependentUpon>201705162345078_databasefix.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -358,17 +346,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705100124079_initialcreate.resx">
-      <DependentUpon>201705100124079_initialcreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705101456224_secondmigration.resx">
-      <DependentUpon>201705101456224_secondmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705131648422_updateproductmodel.resx">
-      <DependentUpon>201705131648422_updateproductmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705111434471_redefineproduct.resx">
-      <DependentUpon>201705111434471_redefineproduct.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705162345078_databasefix.resx">
+      <DependentUpon>201705162345078_databasefix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
