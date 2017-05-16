@@ -19,7 +19,7 @@ namespace Bangazon_MVC_InitialSite.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            var cookie = Request.Cookies.AllKeys.("UserCookies");
+            var cookie = Request.Cookies.AllKeys.Contains("UserCookies");
             ViewBag.Products = _productRepository.GetProducts();
             return View("Products");
         }
