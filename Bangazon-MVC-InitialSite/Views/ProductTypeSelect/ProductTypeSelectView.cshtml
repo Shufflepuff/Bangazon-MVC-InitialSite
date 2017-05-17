@@ -5,6 +5,6 @@
 @{
     foreach (ProductType type in ViewBag.Types)
     {
-        <h3>@Html.ActionLink(type.Type, "Index", "Product")</h3>
+        <h3>@Html.ActionLink(type.Type, "Index", "Product", new { productTypeId = type.ProductTypeId }, null)</h3>
     }
 }

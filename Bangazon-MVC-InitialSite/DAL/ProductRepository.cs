@@ -25,5 +25,10 @@ namespace Bangazon_MVC_InitialSite.DAL
         {
             return _context.Products.Where(x => x.ProductId == productId).FirstOrDefault();
         }
+
+        public IEnumerable<Product> GetProductsByProductTypeId(int productTypeId)
+        {
+            return _context.Products.Where(x => x.ProductType.ProductTypeId == productTypeId).ToList<Product>();
+        }
     }
 }

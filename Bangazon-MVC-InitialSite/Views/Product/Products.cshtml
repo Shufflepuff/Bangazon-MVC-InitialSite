@@ -1,5 +1,4 @@
 ﻿@using Bangazon_MVC_InitialSite.Models
-@model Bangazon_MVC_InitialSite.Models.Product
 
 @{
     ViewBag.Title = "Products";
@@ -13,11 +12,10 @@
 </div>
     <hr />
     
-    @foreach (var item in ViewBag.Products)
+    @foreach (Product item in ViewBag.Products)
     {        
         <div class="col-md-4">
-            <p>@item.Name</p>
-            <p>@item.Price</p>
+            <h3>@Html.ActionLink(item.Name, "Index", "Detail", new { productId = item.ProductId }, null)</h3>
         </div>
     }
 

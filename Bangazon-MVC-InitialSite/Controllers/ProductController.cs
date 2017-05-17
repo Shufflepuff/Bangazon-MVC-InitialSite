@@ -19,7 +19,8 @@ namespace Bangazon_MVC_InitialSite.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            ViewBag.Products = _productRepository.GetProducts();
+            int id = int.Parse(Request.QueryString["productTypeId"]);
+            ViewBag.Products = _productRepository.GetProductsByProductTypeId(id);
             return View("Products");
         }
     }
