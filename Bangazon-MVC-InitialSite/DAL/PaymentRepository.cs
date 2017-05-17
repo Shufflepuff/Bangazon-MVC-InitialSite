@@ -1,24 +1,24 @@
-﻿using System;
+﻿using Bangazon_MVC_InitialSite.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Bangazon_MVC_InitialSite.Models;
 
 namespace Bangazon_MVC_InitialSite.Controllers
 {
-    public class PaymentRepository
+    public class PaymentRepository : IPaymentRepo
     {
-        /*[RoutePrefix("payment")]
-   public class PaymentRepository : IPaymentRepository
-   {
-       [HttpGet]
-       public IEnumerable<Payment> GetAll()
-       {
-           var customers = IPaymentRepository.GetAll();
+        private readonly AppContext _context;
 
-           return Request.CreateResponse(HttpStatusCode.OK, customers);
-       }
-   }
-   */
+        public PaymentRepository(AppContext context)
+        {
+            _context = context;
+        }
+        public IEnumerable<Payment> GetPayments()
+        {
+            return _context.Payments;
+        }
     }
 
 }

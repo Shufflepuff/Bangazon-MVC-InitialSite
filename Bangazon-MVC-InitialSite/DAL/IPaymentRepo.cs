@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bangazon_MVC_InitialSite.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Bangazon_MVC_InitialSite.DAL
 {
-    interface IPaymentRepo
+    public interface IPaymentRepo
     {
+        IEnumerable<Payment> GetPayments();
     }
 }
