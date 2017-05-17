@@ -231,6 +231,7 @@
     <Compile Include="App_Start\StructuremapWebApi.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddProductController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IProductRepository.cs" />
@@ -239,9 +240,11 @@
     <Compile Include="DAL\IProductTypeRepo.cs" />
     <Compile Include="DAL\ProductTypeRepo.cs" />
     <Compile Include="DAL\AddProductRepo.cs" />
+    <Compile Include="DAL\CustomerRepo.cs" />
     <Compile Include="DAL\IAddProductRepo.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DAL\AppContext.cs" />
+    <Compile Include="DAL\ICustomerRepo.cs" />
     <Compile Include="DAL\ProductRepository.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -252,8 +255,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705170128385_CreateDatabase.cs" />
+    <Compile Include="Migrations\201705170128385_CreateDatabase.Designer.cs">
+      <DependentUpon>201705170128385_CreateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerDropDown.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\InvoiceLine.cs" />
@@ -326,9 +335,11 @@
     <Content Include="Views\Detail\Detail.cshtml" />
     <Content Include="Views\ProductTypeSelect\ProductTypeSelectView.cshtml" />
     <Content Include="Views\Product\Products.cshtml" />
+    <Content Include="Views\Customer\CustomerDropDownPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -337,6 +348,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705170128385_CreateDatabase.resx">
+      <DependentUpon>201705170128385_CreateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

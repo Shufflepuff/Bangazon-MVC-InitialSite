@@ -1,0 +1,3 @@
+﻿@model Bangazon_MVC_InitialSite.Models.CustomerDropDown
+
+@Html.DropDownListFor(m => m.SelectedId, new SelectList(Model.CustomerDropDownData, "Value", "Text", 1), "--select user--")

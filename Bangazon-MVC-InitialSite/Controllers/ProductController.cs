@@ -21,6 +21,8 @@ namespace Bangazon_MVC_InitialSite.Controllers
         {
             int id = int.Parse(Request.QueryString["productTypeId"]);
             ViewBag.Products = _productRepository.GetProductsByProductTypeId(id);
+            var cookie = Request.Cookies.AllKeys.Contains("UserCookies");
+            ViewBag.Products = _productRepository.GetProducts();
             return View("Products");
         }
     }

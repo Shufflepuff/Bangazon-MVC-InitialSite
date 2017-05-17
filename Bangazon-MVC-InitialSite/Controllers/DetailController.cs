@@ -16,9 +16,10 @@ namespace Bangazon_MVC_InitialSite.Controllers
             _productRepository = productRepository;
         }
         // GET: Detail
-        public ActionResult Index(int productId)
+        [HttpGet]
+        public ActionResult Index()
         {
-            ViewBag.Product = _productRepository.GetProductById(productId);
+            ViewBag.Product = _productRepository.GetProductById(1);
             return View("Detail");
         }
     }
