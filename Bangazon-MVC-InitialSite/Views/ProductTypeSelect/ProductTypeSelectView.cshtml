@@ -1,0 +1,10 @@
+﻿@using Bangazon_MVC_InitialSite.Models
+
+<h2>Select a Product Type!</h2>
+
+@{
+    foreach (ProductType type in ViewBag.Types)
+    {
+        <h3>@Html.ActionLink(type.Type, "Index", "Product", new { productTypeId = type.ProductTypeId }, null)</h3>
+    }
+}

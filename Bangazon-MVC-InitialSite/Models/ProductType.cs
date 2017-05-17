@@ -15,6 +15,5 @@ namespace Bangazon_MVC_InitialSite.Models
         public string Type { get; set; }
 
         public virtual IEnumerable<Product> Products { get; set; }
-
     }
 }

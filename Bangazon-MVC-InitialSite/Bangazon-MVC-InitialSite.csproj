@@ -236,6 +236,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IProductRepository.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductTypeSelectController.cs" />
+    <Compile Include="DAL\IProductTypeRepo.cs" />
+    <Compile Include="DAL\ProductTypeRepo.cs" />
     <Compile Include="DAL\AddProductRepo.cs" />
     <Compile Include="DAL\CustomerRepo.cs" />
     <Compile Include="DAL\IAddProductRepo.cs" />
@@ -330,6 +333,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\AddProduct\Index.cshtml" />
     <Content Include="Views\Detail\Detail.cshtml" />
+    <Content Include="Views\ProductTypeSelect\ProductTypeSelectView.cshtml" />
     <Content Include="Views\Product\Products.cshtml" />
     <Content Include="Views\Customer\CustomerDropDownPartial.cshtml" />
   </ItemGroup>
