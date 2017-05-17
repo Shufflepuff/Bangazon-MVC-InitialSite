@@ -24,9 +24,9 @@ namespace Bangazon_MVC_InitialSite.Controllers
             return View(product);
         }
 
-        // POST: AddProduct
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+       // POST: AddProduct
+       [HttpPost]
+       [ValidateAntiForgeryToken]
         public ActionResult Index(Product product)
         {
             try
