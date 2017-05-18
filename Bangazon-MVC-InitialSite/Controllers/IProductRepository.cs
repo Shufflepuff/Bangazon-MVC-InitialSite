@@ -14,5 +14,7 @@ namespace Bangazon_MVC_InitialSite.DAL
         Product GetProductById(int productId);
 
         IEnumerable<Product> GetProductsByProductTypeId(int productTypeId);
+
+        void AddProduct(Product product);
     }
 }

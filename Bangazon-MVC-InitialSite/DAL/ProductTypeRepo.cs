@@ -22,7 +22,7 @@ namespace Bangazon_MVC_InitialSite.DAL
 
         public ProductType GetProductTypeById(int id)
         {
-            throw new NotImplementedException();
+            return _context.ProductTypes.FirstOrDefault(p => p.ProductTypeId == id);
         }
     }
 }

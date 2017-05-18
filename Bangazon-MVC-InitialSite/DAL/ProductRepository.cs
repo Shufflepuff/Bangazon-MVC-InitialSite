@@ -30,5 +30,11 @@ namespace Bangazon_MVC_InitialSite.DAL
         {
             return _context.Products.Where(x => x.ProductType.ProductTypeId == productTypeId).ToList<Product>();
         }
+
+        public void AddProduct(Product product)
+        {
+            _context.Products.Add(product);
+            _context.SaveChanges();
+        }
     }
 }

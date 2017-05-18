@@ -230,7 +230,6 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\StructuremapWebApi.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AddProductController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -239,9 +238,7 @@
     <Compile Include="Controllers\ProductTypeSelectController.cs" />
     <Compile Include="DAL\IProductTypeRepo.cs" />
     <Compile Include="DAL\ProductTypeRepo.cs" />
-    <Compile Include="DAL\AddProductRepo.cs" />
     <Compile Include="DAL\CustomerRepo.cs" />
-    <Compile Include="DAL\IAddProductRepo.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DAL\AppContext.cs" />
     <Compile Include="DAL\ICustomerRepo.cs" />
@@ -263,8 +260,13 @@
     <Compile Include="Migrations\201705170151572_as-migration1.Designer.cs">
       <DependentUpon>201705170151572_as-migration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705181637009_createproductviewmodel.cs" />
+    <Compile Include="Migrations\201705181637009_createproductviewmodel.Designer.cs">
+      <DependentUpon>201705181637009_createproductviewmodel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CreateProductViewModel.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerDropDown.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -335,11 +337,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\AddProduct\Index.cshtml" />
     <Content Include="Views\Detail\Detail.cshtml" />
     <Content Include="Views\ProductTypeSelect\ProductTypeSelectView.cshtml" />
     <Content Include="Views\Product\Products.cshtml" />
     <Content Include="Views\Customer\CustomerDropDownPartial.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -359,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705170151572_as-migration1.resx">
       <DependentUpon>201705170151572_as-migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705181637009_createproductviewmodel.resx">
+      <DependentUpon>201705181637009_createproductviewmodel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

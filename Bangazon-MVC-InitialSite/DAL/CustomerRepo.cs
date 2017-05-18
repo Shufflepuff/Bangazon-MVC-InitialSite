@@ -15,6 +15,11 @@ namespace Bangazon_MVC_InitialSite.DAL
             _context = context;
         }
 
+        public Customer GetCustomerById(int id)
+        {
+            return _context.Customers.FirstOrDefault(c => c.CustomerId == id);
+        }
+
         public IEnumerable<Customer> GetCustomers()
         {
             return _context.Customers;
