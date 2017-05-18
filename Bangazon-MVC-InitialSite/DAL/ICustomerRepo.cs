@@ -9,5 +9,7 @@ namespace Bangazon_MVC_InitialSite.DAL
     public interface ICustomerRepo
     {
         IEnumerable<Customer> GetCustomers();
+
+        Customer GetCustomerById(int id);
     }
 }
